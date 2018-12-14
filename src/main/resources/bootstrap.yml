@@ -1,3 +1,23 @@
 spring:
   application:
     name: Zuul
+    
+management:
+  endpoints:
+    web:
+      cors:
+# Whether credentials are supported. When not set, credentials are not supported.
+        allow-credentials: true
+# Comma-separated list of headers to allow in a request. '*' allows all headers.
+        allowed-headers: '*'
+# Comma-separated list of methods to allow. '*' allows all methods. 
+# When not set, defaults to GET.
+        allowed-methods: '*'
+# Comma-separated list of origins to allow. '*' allows all origins.
+#  When not set, CORS support is disabled.
+        allowed-origins: '*'
+# Comma-separated list of headers to include in a response.
+#        exposed-headers:
+
+ribbon:
+  ReadTimeout: 5000
